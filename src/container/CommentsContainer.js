@@ -4,7 +4,7 @@ import AddComment from '../presentational/AddComment';
 import Comment from '../presentational/Comment';
 
 
-class Comments extends React.Component{
+class CommentsContainer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -84,4 +84,4 @@ class Comments extends React.Component{
     }
 };
 
-export default Comments;
+export default CommentsContainer;

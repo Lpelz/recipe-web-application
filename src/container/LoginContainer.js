@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import LoginPresentational from '../presentational/Login';
+import Login from '../presentational/Login';
 import {Redirect} from 'react-router-dom';
 
-class Login extends React.Component{
+class LoginContainer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -36,9 +36,9 @@ class Login extends React.Component{
             return (<Redirect to="/"/>);
         }
         return(
-            <LoginPresentational login = {this.login} inputChange = {this.inputChange}/>
+            <Login login = {this.login} inputChange = {this.inputChange}/>
         );
     }
 };
 
-export default Login;
+export default LoginContainer;

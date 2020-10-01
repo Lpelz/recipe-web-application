@@ -1,17 +1,17 @@
 import React from 'react';
 import MeatballsRecipe from '../presentational/MeatballsRecipe';
 import PancakesRecipe from '../presentational/PancakesRecipe';
-import Comments from './Comments';
+import CommentsContainer from './CommentsContainer';
 
 
-class Recipe extends React.Component{
+class RecipeContainer extends React.Component{
 
     render(){
         if(this.props.recipeName === "meatballs"){
             return(
                 <div>
                     <MeatballsRecipe/>
-                    <Comments recipeName = {"meatballs"}/>
+                    <CommentsContainer recipeName = {"meatballs"}/>
                 </div>
             );
         }
@@ -19,11 +19,11 @@ class Recipe extends React.Component{
             return(
                 <div>
                     <PancakesRecipe/>
-                    <Comments recipeName = {"pancakes"}/>
+                    <CommentsContainer recipeName = {"pancakes"}/>
                 </div>
             );
         }
     }
 };
 
-export default Recipe;
+export default RecipeContainer;

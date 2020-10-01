@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import RegistrationPresentational from '../presentational/Registration'
+import Registration from '../presentational/Registration'
 import {Redirect} from 'react-router-dom';
 
 
-class Registration extends React.Component{
+class RegistrationContainer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -40,9 +40,9 @@ class Registration extends React.Component{
             return (<Redirect to="/login"/>);
         }
         return(
-            <RegistrationPresentational register = {this.register} inputChange = {this.inputChange}/>
+            <Registration register = {this.register} inputChange = {this.inputChange}/>
         );    
     };
 };
 
-export default Registration;
+export default RegistrationContainer;

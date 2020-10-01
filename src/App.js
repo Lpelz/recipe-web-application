@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Registration from './container/Registration'
-import Login from './container/Login'
-import Recipe from './container/Recipe'
+import RegistrationContainer from './container/RegistrationContainer'
+import LoginContainer from './container/LoginContainer'
+import RecipeContainer from './container/RecipeContainer'
 import Home from './presentational/Home'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -37,11 +37,11 @@ class App extends Component {
         </Navbar>
         <Router>
           <Switch>
-            <Route exact path="/registration" render = {props => <Registration/>}/>  
-            <Route exact path="/login" render = {props => <Login appUpdateState = {this.appUpdateState}/>}/>  
+            <Route exact path="/registration" render = {props => <RegistrationContainer/>}/>  
+            <Route exact path="/login" render = {props => <LoginContainer appUpdateState = {this.appUpdateState}/>}/>  
             <Route exact path="/" render = {props => <Home/>}/>  
-            <Route exact path="/meatballs" render = {props => <Recipe recipeName = "meatballs"/>}/>  
-            <Route exact path="/pancakes" render = {props => <Recipe recipeName = "pancakes"/>}/>  
+            <Route exact path="/meatballs" render = {props => <RecipeContainer recipeName = "meatballs"/>}/>  
+            <Route exact path="/pancakes" render = {props => <RecipeContainer recipeName = "pancakes"/>}/>  
           </Switch>
         </Router>
       </div>
